@@ -1,0 +1,55 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f8f9fa;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+.gallery a img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery a img:hover {
+  transform: scale(1.05);
+}
+
+/* Ensure LightGallery overlay shows above Bootstrap modal */
+.lg-backdrop,
+.lg-outer {
+  z-index: 2000 !important; /* Higher than Bootstrap modal (z-index 1055) */
+}
+
+
+.modal-body {
+    max-height: 70vh;   /* Limit modal height */
+    overflow-y: auto;   /* Add vertical scrollbar */
+}
+
+/* Optional: grid layout for images */
+#lightgallery a {
+    display: inline-block;
+    margin: 5px;
+}
+#lightgallery img {
+    border-radius: 6px;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+#lightgallery img:hover {
+    transform: scale(1.05);
+}
