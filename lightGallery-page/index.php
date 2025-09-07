@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    
 
     <h1 style="text-align:center;">My Lightbox Gallery</h1>
 
